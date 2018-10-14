@@ -16,6 +16,24 @@ What things you need to install the software and how to install them
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
+### Setup
+1. Install Vagrant, VirtualBox, and Python3. Installation instructions can be found using the links above.
+2. Clone or Fork this repository
+
+### To Run
+
+Once installed, launch Vagrant VM by running `vagrant up`, and logging in with `vagrant ssh`
+
+To load the database, use the command `psql -d news -f newsdata.sql`. This will allow you to connect to the database and run the necessary SQL statements.
+
+To execute the program, run `python3 newsdata.py`
+
+#### The Database
+The database includes three tables :
+* Authors - contains article author names, a bio, and ID
+* Articles - contains information about the article, including a Title and Body, as well as a foreign key referencing Author ID
+* Log - contains a single record for every time the website was accessed. This record contains the path accessed, status, method, etc....
+
 ### Coding style
 The code conforms to the PEP8 style recommendations.
 
